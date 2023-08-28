@@ -2,6 +2,10 @@ class Hello
 {
     public static void main(String a[])
     {
-        System.out.print("Hello World");
+        int num = 3;
+        int num2 = 10;
+
+        System.out.println("Hello Africa");
+        System.out.println(num + num2);
     }
 }
