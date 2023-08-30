@@ -14,7 +14,16 @@ public class if_else
         } else if (third > 15) {
             System.out.println("Almost screwed!! but thankfully, the third value is greater than 15");
         } else {
-            System.out.println("Shit, Our trials failed ");
+            System.out.println("Shit, Our three trials failed ");
         }
+
+
+        // Let's do some tenary stuff
+
+        char result = third > 50 ? 'G' : 'L';
+
+        System.out.println(result);
+
+
     }
 }
