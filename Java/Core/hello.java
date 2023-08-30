@@ -14,5 +14,8 @@ class Hello
         System.out.println(result);
         System.out.println(mark);
         System.out.println(mark2);
+
+
+        // Literals
     }
 }
