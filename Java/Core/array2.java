@@ -26,12 +26,13 @@ public class array2 {
         Jackson.name = "Jackson";
         Jackson.marks = 80;
 
-
         Students studentsArray[] = new Students[] {Raymond, Sharon, Titi, Jackson};
 
-
         for (int i = 0; i < studentsArray.length; i++) {
-            System.out.println(studentsArray[i]);
+            System.out.println("Roll Number: " + studentsArray[i].rollnum);
+            System.out.println("Name: " + studentsArray[i].name);
+            System.out.println("Marks: " + studentsArray[i].marks);
+            System.out.println(); // Blank line for output separation
         }
     }
 }
