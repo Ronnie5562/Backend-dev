@@ -12,5 +12,31 @@ public class array {
 
             System.out.println(arr[i] * arr[i]);
         }
+
+
+        //  Multidimensional array
+        int multiplenums[][] = new int[5][5];
+
+        for (int i = 0; i <= 4; i++) {
+
+            for (int j = 0; j <= 4; j++){
+                System.out.print(multiplenums[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+        int multiplenums2[][] = new int[5][5];
+
+        for (int i = 0; i <= 4; i++) {
+
+            for (int j = 0; j <= 4; j++){
+                multiplenums2[i][j] = (int)(Math.random() * 100);
+                System.out.print(multiplenums2[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
     }
 }
