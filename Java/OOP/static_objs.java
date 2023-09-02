@@ -20,7 +20,7 @@ class Car {
         companyName = "Auto Vend";
     }
 
-    // Constructor
+    // Constructor - Just like def __init__(): in python
     public Car(int id)
     {
         this.id = id;
