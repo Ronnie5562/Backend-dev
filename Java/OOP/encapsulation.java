@@ -80,5 +80,30 @@ class Book
 }
 
 public class encapsulation {
-    Book book1 = new Book("Flying Cars", "Ashlee vance", 12345, 200, 450, "SciFi");
+    public static void main(String[] args) {
+        Book book1 = new Book("Elon Musk and the Quest for a Fantastic Future ", "Ashlee Vance", 12345, 200, 450, "Inspirational");
+        System.out.println("Title: " + book1.getTitle());
+        System.out.println("Author: " + book1.getAuthor());
+        System.out.println("ISBN: " + book1.getISBN());
+        System.out.println("Price: " + book1.getPrice());
+        System.out.println("No_of_pages: " + book1.getNo_of_pages());
+        System.out.println("Category: " + book1.getCategory());
+
+
+        System.out.println();
+
+        book1.setTitle("Whose Image Are You? ");
+        book1.setAuthor("LaFAMCALL");
+        book1.setISBN(1234533);
+        book1.setPrice(2000);
+        book1.setNo_of_pages(300);
+        book1.setCategory("Religion");
+
+        System.out.println("Title: " + book1.getTitle());
+        System.out.println("Author: " + book1.getAuthor());
+        System.out.println("ISBN: " + book1.getISBN());
+        System.out.println("Price: " + book1.getPrice());
+        System.out.println("No_of_pages: " + book1.getNo_of_pages());
+        System.out.println("Category: " + book1.getCategory());
+    }
 }
