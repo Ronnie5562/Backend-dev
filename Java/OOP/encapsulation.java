@@ -33,7 +33,7 @@ class Book
     }
 
     public void setISBN(int iSBN) {
-        ISBN = iSBN;
+        this.ISBN = iSBN;
     }
 
     public int getPrice() {
@@ -62,6 +62,14 @@ class Book
 
 
 
+    /**
+     * @param Title
+     * @param Author
+     * @param ISBN
+     * @param Price
+     * @param no_of_pages
+     * @param Category
+     */
     public Book(
         String Title,
         String Author,
@@ -97,7 +105,7 @@ public class encapsulation {
         book1.setISBN(1234533);
         book1.setPrice(2000);
         book1.setNo_of_pages(300);
-        book1.setCategory("Religion");
+        book1.setCategory("Religious");
 
         System.out.println("Title: " + book1.getTitle());
         System.out.println("Author: " + book1.getAuthor());
