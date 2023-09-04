@@ -14,6 +14,6 @@ public class string {
 
 
 
-        //  NOTE: By default, strings in Java are immuta
+        //  NOTE: By default, strings in Java are immutable but if you want to get to use mutable strings, you can use - The StringBuffer or StringBuilder class in java
     }
 }

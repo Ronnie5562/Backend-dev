@@ -75,7 +75,7 @@ public class static_objs {
         System.out.println(">>>>>   To test our static block");
         System.out.println();
 
-        System.out.println("At " + Car.companyName + " we are the world's best dealers of " + Car.Vehicles);
+        System.out.println("At " + Car.companyName + " we are the world's best dealers of " + Car.Vehicles); // Yes, we are!!!
         System.out.println();
     }
 }
