@@ -70,6 +70,7 @@ class Book
      * @param no_of_pages
      * @param Category
      */
+    // This is my constructor - A constructor in java is just like def __init__(self): in python.
     public Book(
         String Title,
         String Author,
