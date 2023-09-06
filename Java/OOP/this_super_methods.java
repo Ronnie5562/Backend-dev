@@ -32,6 +32,6 @@ class B extends A
 public class this_super_methods {
     public static void main(String[] args) {
         B obj = new B(10);
-        // System.out.println(obj);
+        System.out.println(obj);
     }
 }
