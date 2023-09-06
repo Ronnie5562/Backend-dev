@@ -6,7 +6,7 @@ public class inheritance {
         int num2 = obj.sub(15, 5);
         int num3 = obj.mul(3, 5);
         int num4 = obj.mod(10, 3);
-        int num5 = obj.power(10);
+        double num5 = obj.power(5, 3);
         int num6 = obj.div(10, 5);
         double num7 = obj.cos(60);
         double num8 = obj.sin(60);

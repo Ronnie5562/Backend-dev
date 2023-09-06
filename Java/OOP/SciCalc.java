@@ -20,7 +20,5 @@ public class SciCalc extends AdvCalc {
         System.out.println(obj.sin(30));
         System.out.println(obj.cos(30));
         System.out.println(obj.tan(45));
-
     }
-
 }
