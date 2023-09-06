@@ -1,6 +1,8 @@
+// There is no multiple inheritance in java, but multi-level inheritance works
+
 public class inheritance {
     public static void main(String[] args){
-        SciCalc obj = new SciCalc();
+        SciCalc obj = new SciCalc ();
 
         int num1 = obj.add(5, 10);
         int num2 = obj.sub(15, 5);
