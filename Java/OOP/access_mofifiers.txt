@@ -1,0 +1,14 @@
+Acceess modifiers in Java are keywords added to the declaration of an object that specifies where the object can be accessed from.
+
+1. default ==> This access modifier is the default modifier. You don't have to explicitly write it out when declaring an object.
+        In this case, the object, class can be accessed throughout the package (all files in the folder) that the object, class was declared.
+
+
+2. private ==> Syntax - private class class_name {}, private method method_name {} e.t.c
+        In this case, the object, class can  only be accessed in that particular class where it was declared.
+
+
+3. public ==> Syntax - public class class_name {}, public method method_name {} e.t.c
+        In this case, the object, class can  be accessed everywhere.
+
+4. protected ==> 
