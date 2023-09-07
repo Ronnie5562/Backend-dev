@@ -1,5 +1,7 @@
 // There is no multiple inheritance in java, but multi-level inheritance works
 
+import Tools.SciCalc;
+
 public class inheritance {
     public static void main(String[] args){
         SciCalc obj = new SciCalc ();

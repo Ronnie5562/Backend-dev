@@ -1,3 +1,5 @@
+package Tools;
+
 public class SciCalc extends AdvCalc {
     public double cos(int n){
         double res = Math.toRadians(n);
