@@ -11,4 +11,5 @@ Acceess modifiers in Java are keywords added to the declaration of an object tha
 3. public ==> Syntax - public class class_name {}, public method method_name {} e.t.c
         In this case, the object, class can  be accessed everywhere.
 
-4. protected ==> 
+4. protected ==> Syntax - protected class class_name {}, protected method method_name {} e.t.c
+                In this case, the object, class can be accesed in the same package and in a sub-class (where the protected is inherited) in another package.
