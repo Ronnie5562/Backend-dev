@@ -67,6 +67,7 @@ public class Learn_Interface {
 
 
         Ronald.devApp(desk);
+        System.out.println();
         Ronald.devApp(lap);
     }
 }
