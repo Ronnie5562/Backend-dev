@@ -10,7 +10,7 @@ class B extends A {
     }
 }
 
-public class play {
+public class Play {
     public static void main(String[] args){
         A obj = new B(); //Using polymorphism
         obj.show();
