@@ -2,6 +2,28 @@ enum Status {
     Running, Failed, Pending, Success;
 }
 
+enum Laptop {
+    MacBook(2000), IdeaPad(1200), ThinkPad(1500), EduPad, Surface(1800);
+
+    private int price;
+
+    private Laptop(){
+        this.price = 500;
+    }
+
+    private Laptop(int price){
+        this.price = price;
+    }
+
+    public int getPrice(){
+        return this.price;
+    }
+
+    public void getPrice(int price){
+        this.price = price;
+    }
+}
+
 
 public class learn_enum {
 
@@ -50,9 +72,10 @@ public class learn_enum {
        }
     }
 
+    
     public static void enum_new_switch(){
         Status curr = Status.Success;
-
+        
         switch (curr) {
             case Running -> System.out.println("All good");
             case Failed -> System.out.println("Try Again");
@@ -61,8 +84,8 @@ public class learn_enum {
             default -> System.out.println("Something went wrong !!!");
         }
     }
-
-    public static void main(String[] args){
+    
+    public static void show_status(){
         learn_enum.showall();
 
         System.out.println();
@@ -76,5 +99,19 @@ public class learn_enum {
         System.out.println();
 
         learn_enum.enum_new_switch();
+    }
+
+    public static void show_laptop() {
+        Laptop[] lap_list = Laptop.values();
+
+        for (Laptop lap : lap_list){
+            System.out.println("A/An " + lap + " costs " + lap.getPrice());
+        }
+    }
+
+    public static void main(String[] args){
+        // learn_enum.show_status();
+        learn_enum.show_laptop();
+
     }
 }
