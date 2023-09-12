@@ -55,23 +55,23 @@ public class learn_enum {
     public static void enum_switch(){
         Status curr = Status.Running;
 
-       switch (curr) {
-        case Running:
-            System.out.println("All good");
-            break;
-        case Failed:
-            System.out.println("Try Again");
-            break;
-        case Pending:
-            System.out.println("Please Wait");
-            break;
-        case Success:
-            System.out.println("Success");
-            break;       
-        default:
-            System.out.println("Something went wrong !!!");
-            break;
-       }
+        switch (curr) {
+            case Running:
+                System.out.println("All good");
+                break;
+            case Failed:
+                System.out.println("Try Again");
+                break;
+            case Pending:
+                System.out.println("Please Wait");
+                break;
+            case Success:
+                System.out.println("Success");
+                break;       
+            default:
+                System.out.println("Something went wrong !!!");
+                break;
+        }
     }
 
     
