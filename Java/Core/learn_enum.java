@@ -1,4 +1,6 @@
-enum Status {
+// enum is a class and it's inner elements are ojects
+
+enum Status { // Status is the class here, and Running, Failed, Pending, Success are all objects
     Running, Failed, Pending, Success;
 }
 
