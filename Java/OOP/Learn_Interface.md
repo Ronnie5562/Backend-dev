@@ -43,4 +43,11 @@ When a class implements an interface, it must provide a public implementation fo
 - Enforcing multiple inheritance-like behavior by allowing a class to implement multiple interfaces.
 - Achieving loose coupling in software design by programming to interfaces rather than concrete classes.
 
+***It's important to note that variables declared within interfaces in Java have specific characteristics:***
+
+- **Static**: Interface variables are inherently `static`, which means they belong to the interface itself and not to instances of classes that implement the interface. Consequently, every object implementing the interface shares the same value for these variables.
+
+- **Final**: Additionally, interface variables are declared as `final`, making them constants. Once initialized, their values cannot be changed.
+
+
 ***In summary, interfaces in Java are essential for defining contracts and ensuring that classes adhere to a specific structure. They play a crucial role in achieving flexibility and modularity in your code, making it easier to maintain and extend your Java applications.***
