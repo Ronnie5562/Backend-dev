@@ -1,6 +1,6 @@
 <img width="100%" height="50" src="https://i.imgur.com/dBaSKWF.gif" />
 
-# FULL JAVA COURSE FROM TELUSKO
+# FULL JAVA COURSE BY TELUSKO
 <img width="100%" height="50" src="https://i.imgur.com/dBaSKWF.gif" />
 
 1. Java Introduction - `Completed ✅`
