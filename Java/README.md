@@ -1,4 +1,7 @@
+<img width="100%" height="50" src="https://i.imgur.com/dBaSKWF.gif" />
+
 # FULL JAVA COURSE FROM TELUSKO
+<img width="100%" height="50" src="https://i.imgur.com/dBaSKWF.gif" />
 
 1. Java Introduction - `Completed ✅`
 2. Java Development Kit (JDK) Setup - `Completed ✅`
@@ -101,5 +104,8 @@
 99. Map Filter Reduce Sorted in Java - `Not Completed ❌`
 
 
+<img width="100%" height="50" src="https://i.imgur.com/dBaSKWF.gif" />
+
 ## Author
 [Abimbola Ronald](https://www.linkedin.com/in/abimbola-ronald-977299224/)
+<img width="100%" height="50" src="https://i.imgur.com/dBaSKWF.gif" />
