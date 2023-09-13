@@ -1,0 +1,12 @@
+.gradient-div {
+  background: linear-gradient(to right, #f12711, #f5af19);
+  background: linear-gradient(to right, #1e90ff, #00bfff);
+  padding: 1px 5px;
+  display: inline-block;
+  border-radius: 5px
+}
+
+h4 {
+  color: white;
+  margin: 0;
+}
