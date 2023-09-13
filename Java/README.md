@@ -76,12 +76,12 @@
 71. What is Annotation in Java - `Completed ✅`
 72. Functional Interface New in Java - `Completed ✅`
 73. Lambda Expression in Java - `Completed ✅`
-74. Lambda Expression with return - `Not Completed ❌`
-75. Types of Interface in Java - `Not Completed ❌`
-76. What is Exception in Java - `Not Completed ❌`
-77. Exception Handling Using try catch in Java - `Not Completed ❌`
-78. Try with Multiple Catch in Java - `Not Completed ❌`
-79. Exception Hierarchy in Java - `Not Completed ❌`
+74. Lambda Expression with return - `Completed ✅`
+75. Types of Interface in Java - `Completed ✅`
+76. What is Exception in Java - `Completed ✅`
+77. Exception Handling Using try catch in Java - `Completed ✅`
+78. Try with Multiple Catch in Java - `Completed ✅`
+79. Exception Hierarchy in Java - `Completed ✅`
 80. Exception throw keyword in Java - `Not Completed ❌`
 81. Custom Exception in Java - `Not Completed ❌`
 82. Ducking Exception using throws in Java - `Not Completed ❌`
