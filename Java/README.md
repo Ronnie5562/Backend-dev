@@ -82,9 +82,9 @@
 77. Exception Handling Using try catch in Java - `Completed ✅`
 78. Try with Multiple Catch in Java - `Completed ✅`
 79. Exception Hierarchy in Java - `Completed ✅`
-80. Exception throw keyword in Java - `Not Completed ❌`
-81. Custom Exception in Java - `Not Completed ❌`
-82. Ducking Exception using throws in Java - `Not Completed ❌`
+80. Exception throw keyword in Java - `Completed ✅`
+81. Custom Exception in Java - `Completed ✅`
+82. Ducking Exception using throws in Java - `Completed ✅`
 83. User Input using BufferedReader and Scanner in Java - `Not Completed ❌`
 84. try with resources in Java - `Not Completed ❌`
 85. Threads in Java - `Not Completed ❌`
