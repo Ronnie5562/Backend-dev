@@ -14,10 +14,17 @@ class solveMath implements doMath{
     }
 }
 
+// Custom Exception class
+class RonaldException extends Exception {
+    public RonaldException(String str) {
+        super(str);
+    }
+}
+
 public class exceptions {
     public static void main(String[] args){
-        int a = 15;
-        int b = 0;
+        int a = 17;
+        int b = 1;
 
         solveMath Student = new solveMath();
         int nums[] = new int[5];
@@ -29,15 +36,21 @@ public class exceptions {
         try
         {
             result = (double) Student.divide(a, b);
+            if (result == 0) throw new ArithmeticException(); // Manualy triggers the catch block with `ArithmeticException` exception
+            else if (result == 17) throw new RonaldException("Don't you ever dare make a calculation that has a result of my age in 2023");
 
             for (int i = 0; i < 5; i++){
                 nums[i] = i + 1;
             }
             arrayNum = nums[4];
         }
+        catch (RonaldException error)
+        {
+            System.out.println(error);
+        }
         catch (ArithmeticException error)
         {
-            System.out.println("You cannot divide with a 0 (zero) as your denominator ==> By default, we will divide it by 1");
+            System.out.print("The default value is: ");
             result = (double) Student.divide(a, 1);
         }
         catch (ArrayIndexOutOfBoundsException error)
@@ -46,11 +59,12 @@ public class exceptions {
         }
         catch (Exception error)
         {
-            System.out.println("Something went wrong, check your code techbro isonu");
+            System.out.println("Something went wrong," + error);
+            System.out.println(" Check your code. Techbro isonu");
         }
 
-        System.out.println(result);
-        System.out.println(arrayNum);
+        System.out.println("Division result: " + result);
+        System.out.println("Array Indexing result: " + arrayNum);
 
     }
 }
