@@ -85,7 +85,7 @@
 80. Exception throw keyword in Java - `Completed ✅`
 81. Custom Exception in Java - `Completed ✅`
 82. Ducking Exception using throws in Java - `Completed ✅`
-83. User Input using BufferedReader and Scanner in Java - `Not Completed ❌`
+83. User Input using BufferedReader and Scanner in Java - `Completed ✅`
 84. try with resources in Java - `Not Completed ❌`
 85. Threads in Java - `Not Completed ❌`
 86. Multiple Threads in Java - `Not Completed ❌`
