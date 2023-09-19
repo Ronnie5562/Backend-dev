@@ -3,11 +3,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import javax.sound.midi.Soundbank;
-
-
-
-class Student
+class Student implements Comparable<Student>
 {
 	int age;
     int grade;
@@ -35,13 +31,17 @@ class Student
 		else
 			return -1;
 	}
-	public int CompareGrade(Student other)
-	{
-		if(this.age > other.age)
-			return 1;
-		else
-			return -1;
-	}
+
+    @Override
+    public int compareTo(Student Other) {
+        // if (this.grade > Other.grade)
+        //     return 1;
+        // else
+        //     return -1;
+        return 0;
+    }
+
+    
 }
 
 
@@ -74,14 +74,7 @@ public class comparator_comparable {
     }
 
     public static void compare_students_grade(){
-        Comparator<Student> com = new Comparator<Student>() {
-            public int compare(Student A, Student B) {
-                if (A.grade < B.grade)
-                    return 1;
-                else
-                    return -1;
-            }
-        };
+        Comparator<Student> com = (A, B) -> A.grade < B.grade ? 1 : -1; // This is possible because `Comparator` is a functionalInterface
 
         List<Student> Studs = new ArrayList<>();
         Studs.add(new Student(18, 83, "Sophia"));
