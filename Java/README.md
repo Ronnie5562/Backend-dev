@@ -85,19 +85,19 @@
 80. Exception throw keyword in Java - `Completed ✅`
 81. Custom Exception in Java - `Completed ✅`
 82. Ducking Exception using throws in Java - `Completed ✅`
-83. User Input using BufferedReader and Scanner in Java - `Not Completed ❌`
-84. try with resources in Java - `Not Completed ❌`
+83. User Input using BufferedReader and Scanner in Java - `Completed ✅`
+84. try with resources in Java - `Completed ✅`
 85. Threads in Java - `Completed ✅`
 86. Multiple Threads in Java - `Completed ✅`
-87. Thread Priority and Sleep in Java - `Not Completed ❌`
-88. Runnable vs Thread in Java - `Not Completed ❌`
-89. Race Condition in Java - `Not Completed ❌`
-90. Thread States in Java - `Not Completed ❌`
-91. Collection API in Java - `Not Completed ❌`
-92. ArrayList in Java - `Not Completed ❌`
-93. Set in Java - `Not Completed ❌`
-94. Map in Java - `Not Completed ❌`
-95. Comparator vs Comparable in Java - `Not Completed ❌`
+87. Thread Priority and Sleep in Java - `Completed ✅`
+88. Runnable vs Thread in Java - `Completed ✅`
+89. Race Condition in Java - `Completed ✅`
+90. Thread States in Java - `Completed ✅`
+91. Collection API in Java - `Completed ✅`
+92. ArrayList in Java - `Completed ✅`
+93. Set in Java - `Completed ✅`
+94. Map in Java - `Completed ✅`
+95. Comparator vs Comparable in Java - `Completed ✅`
 96. Need of Stream API in Java - `Not Completed ❌`
 97. forEach Method in Java - `Not Completed ❌`
 98. Stream API in Java - `Not Completed ❌`
