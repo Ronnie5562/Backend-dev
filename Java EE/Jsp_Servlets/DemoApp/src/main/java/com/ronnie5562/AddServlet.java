@@ -9,7 +9,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet {
 //	private static final long serialVersionUID = 1L;
-
+	
+// We used service() method below -> It works for both post and get request from the form.
+// We also have other methods like doGet() and doPost() that only accepts request from a it's methods. e.g => doGet accepts only requests with a `get` method
 	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
 		int firstNum = Integer.parseInt(req.getParameter("num1"));
