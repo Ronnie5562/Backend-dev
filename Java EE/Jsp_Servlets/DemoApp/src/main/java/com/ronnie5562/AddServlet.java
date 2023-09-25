@@ -5,6 +5,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet {
+//	private static final long serialVersionUID = 1L;
+
 	public void service(HttpServletRequest req, HttpServletResponse res)
 	{
 		int firstNum = Integer.parseInt(req.getParameter("num1"));
@@ -12,7 +14,7 @@ public class AddServlet extends HttpServlet {
 		
 		int result = firstNum + secondNum;
 		
-		System.out.println(result);
+		System.out.println("The result is: " + result);
 	}
 }
  
