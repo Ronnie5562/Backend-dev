@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #536976, #292e49);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s infinite alternate;
+            color: #ffffff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .alert {
+            margin-bottom: 20px;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        button {
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .logout-button {
+            background: linear-gradient(45deg, #e53935, #c62828);
+            color: white;
+        }
+
+        .signup-button {
+            background: linear-gradient(45deg, #43a047, #2e7d32);
+            color: white;
+        }
+
+        .signin-button {
+            background: linear-gradient(45deg, #1976d2, #0d47a1);
+            color: white;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button:hover {
+            filter: brightness(1.2);
+        }
+
+        #message-log {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .alert {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="message-log">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    <strong>Message:</strong> {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="closeMessage(this)">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h1>Welcome to Our Website</h1>
+
+        {% if user.is_authenticated %}
+        <h2>Hello, {{fname}}!</h2>
+        <p>You're successfully logged in.</p>
+        <button type="submit" class="logout-button"><a href="/signout">Sign Out</a></button>
+        {% else %}
+        <button type="submit" class="signup-button"><a href="/signup">Sign Up</a></button>
+        <button type="submit" class="signin-button"><a href="/signin">Sign In</a></button>
+        {% endif %}
+    </div>
+
+    <script>
+        function closeMessage(button) {
+            button.parentElement.style.display = "none";
+        }
+    </script>
+</body>
+</html>

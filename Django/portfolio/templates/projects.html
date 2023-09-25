@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock title %}
+{% block projects-active %}active{% endblock projects-active %}
+{% block footer-opening-tag %}
+    <footer class="text-center text-white position-absolute bottom-0 end-0 start-0" style="background-color: #f1f1f1;">
+    {% endblock footer-opening-tag %}
+        
+    {% block footer-close %}
+    </footer>
+    {% endblock footer-close %}
+{% block body %}
+    <div class="container my-3">
+        <h2 class="text-center">My projects<h2>
+       <div class="row d-flex justify-content-evenly">
+            <div class="card mb-5" style="width: 25rem; padding: 0">
+                <img src="https://source.unsplash.com/700x500/?tech,coding" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem; padding: 0">
+                <img src="https://source.unsplash.com/700x500/?tech,coding" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem; padding: 0">
+                <img src="https://source.unsplash.com/700x500/?tech,coding" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

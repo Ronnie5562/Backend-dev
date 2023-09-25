@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block contact-active %}active{% endblock contact-active %}
+{% block body %}
+
+    <div class="container">
+        <h2 class="text-center my-3 text-success">Contact me</h2>
+        <form class="row g-3" action="/contact" method="post">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="col-md-6">
+                <label for="phone" class="form-label">Phone number</label>
+                <input type="phone" class="form-control" id="phone" name="phone">
+            </div>
+            <div class="col-md-6">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" name="city">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Your Message</label>
+                <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+            </div>
+            
+            <div class="col-12">
+                <button type="submit" class="btn btn-success">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    {% block footer-opening-tag %}
+    <footer class="text-center text-white position-absolute bottom-0 end-0 start-0" style="background-color: #f1f1f1;">
+    {% endblock footer-opening-tag %}
+        
+    {% block footer-close %}
+    </footer>
+    {% endblock footer-close %}
+{% endblock body %}

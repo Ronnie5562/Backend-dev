@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Blogs{% endblock title %}
+{% block body %}
+<div class="container">
+    <h1 style="text-align:center; color: green; margin-top: 5px">Welcome to Ronald's Blog</h1>
+
+    {% for blog in blogs %}
+    <div class="my-4">
+        <h3><a href="/blogpost/{{blog.slug}}" class="text-dark" style="text-decoration: none">{{blog.title}}</a></h3>
+        <div class="my-2">
+            {{ blog.content|slice:":100" | safe }}...
+        <div>
+        <a href="/blogpost/{{blog.slug}}" class="text-dark" style="text-decoration: none"><button class="btn btn-primary">Read More...</button></a>
+        
+    </div> 
+    {% comment %} <div class="d-flex align-items-center mt-3">
+      <div class="flex-grow-1 ms-3">
+        <h4>{{blog.title}}</h4>
+        <div>
+            {{blog.content}}
+        <div>
+      </div>
+      <button class="btn btn-primary">Read more...</button>
+    </div> {% endcomment %}
+    {% endfor %}
+
+</div>
+{% endblock body %}

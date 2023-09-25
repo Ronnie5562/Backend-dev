@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+{% block title-about %}active{% endblock title-about %}
+{% block body %}
+
+    <div class="container my-3">
+        <h2 class="text-center">About Me<h2>
+        <div class="row d-flex justify-content-evenly">
+            <div class="card mb-5" style="width: 25rem; padding: 0">
+                <img src="https://source.unsplash.com/700x500/?tech,coding" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem; padding: 0">
+                <img src="https://source.unsplash.com/700x500/?tech,coding" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 25rem; padding: 0">
+                <img src="https://source.unsplash.com/700x500/?tech,coding" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-3 flex justify-center">
+        <h1 class="my-4">My Coding Video</h1>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zB4I68XVPzQ?rel=0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    {% block footer-opening-tag %}
+    <footer class="text-center text-white position-relative fixed-bottom" style="background-color: #f1f1f1;">
+    {% endblock footer-opening-tag %}
+        
+    {% block footer-close %}
+    </footer>
+    {% endblock footer-close %}
+
+{% endblock body %}
