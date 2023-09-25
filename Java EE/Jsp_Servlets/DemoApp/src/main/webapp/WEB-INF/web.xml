@@ -12,4 +12,14 @@
 	<url-pattern>/add</url-pattern>
 </servlet-mapping>
 
+<servlet>
+	<servlet-name>squaring</servlet-name>
+	<servlet-class>com.ronnie5562.SqServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>squaring</servlet-name>
+	<url-pattern>/square</url-pattern>
+</servlet-mapping>
+
 </web-app>
