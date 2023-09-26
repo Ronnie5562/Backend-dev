@@ -23,7 +23,7 @@ public class SqServlet extends HttpServlet {
 		// This is for sendRedirect
 		int k = Integer.parseInt(req.getParameter("k"));
 		PrintWriter out2 = res.getWriter();
-		out2.println("Result: " + k);
+		out2.println("Result: " + (k * k));
 		System.out.println(" Redirect Working");
 	}
 }

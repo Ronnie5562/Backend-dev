@@ -35,7 +35,7 @@ public class AddServlet extends HttpServlet {
 		
 		// Let's work with sendRedirect Now !!
 		
-		res.sendRedirect("square");
+		res.sendRedirect("square?k=" + firstNum);
 		
 	}
 }
