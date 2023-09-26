@@ -20,7 +20,7 @@ public class SqServlet extends HttpServlet {
 //		out.println("From Sq Servlet");
 //		out.println("Result: " + result);
 		
-		// This is for sendRedirect
+		// This is for sendRedirect - Url redirecting - url rewriting
 		int k = Integer.parseInt(req.getParameter("k"));
 		PrintWriter out2 = res.getWriter();
 		out2.println("Result: " + (k * k));
