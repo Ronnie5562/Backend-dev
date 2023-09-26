@@ -1,5 +1,11 @@
 package com.ronnie5562;
 
-public class loginServlet {
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
+public class loginServlet {
+	public void service(HttpServletRequest req, HttpServletResponse res)
+	{
+		
+	}
 }
