@@ -11,11 +11,19 @@ import jakarta.servlet.http.HttpServletResponse;
 public class SqServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
-		int result = (int)req.getAttribute("result");
-		result *= result;
-		PrintWriter out = res.getWriter();
+//      This is for RequestDispatcher
 		
-		out.println("From Sq Servlet");
-		out.println("Result: " + result);
+//		int result = (int)req.getAttribute("result");
+//		result *= result;
+//		PrintWriter out = res.getWriter();
+//		
+//		out.println("From Sq Servlet");
+//		out.println("Result: " + result);
+		
+		// This is for sendRedirect
+		int k = Integer.parseInt(req.getParameter("k"));
+		PrintWriter out2 = res.getWriter();
+		out2.println("Result: " + k);
+		System.out.println(" Redirect Working");
 	}
 }
