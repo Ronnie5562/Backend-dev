@@ -24,9 +24,6 @@ public class authenticate_login extends HttpServlet{
 				pass = (String)cookie.getValue();
 		}
 		
-		System.out.println(email);
-		System.out.println(pass);
-		
 		String serverEmail = "r.abimbola@alustudent.com";
 		String serverPassword = "admin";
 		
