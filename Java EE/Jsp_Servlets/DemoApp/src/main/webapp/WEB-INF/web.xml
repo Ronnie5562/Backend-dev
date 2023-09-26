@@ -42,5 +42,14 @@
 	<url-pattern>/authenticate</url-pattern>
 </servlet-mapping>
 
+<context-param>
+	<param-name>serverEmail</param-name>
+	<param-value>r.abimbola@alustudent.com</param-value>
+</context-param>
+
+<context-param>
+	<param-name>serverPassword</param-name>
+	<param-value>admin</param-value>
+</context-param>
 
 </web-app>
