@@ -29,6 +29,7 @@ public class AddServlet extends HttpServlet {
 		
 		req.setAttribute("result", result);
 		
+		// Request dispatcher is used to pass data from one servlet to another
 		RequestDispatcher rd = req.getRequestDispatcher("square");
 		rd.forward(req, res);
 	}
