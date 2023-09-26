@@ -1,12 +1,15 @@
 package com.ronnie5562;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class authenticate_login extends HttpServlet{
-	public void service(HttpServletRequest req, HttpServletResponse res)
+	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
 		Cookie[] MyCookies = req.getCookies();
 		String email = "";
@@ -15,18 +18,31 @@ public class authenticate_login extends HttpServlet{
 		for (Cookie cookie : MyCookies)
 		{
 			if (cookie.getName().equals("email"))
-				email = cookie.getValue();
+				email = (String)cookie.getValue();
+
 			if (cookie.getName().equals("pass"))
-				pass = cookie.getValue();
+				pass = (String)cookie.getValue();
 		}
+		
+		System.out.println(email);
+		System.out.println(pass);
 		
 		String serverEmail = "r.abimbola@alustudent.com";
 		String serverPassword = "admin";
 		
+		PrintWriter out = res.getWriter();		
 		
-		
-		if ((email == serverEmail) && (pass == serverPassword))
-			System.out.println();
-		
+		if (email.equals(serverEmail) && pass.equals(serverPassword)) {
+		    out.println("ACCESS GRANTED");
+		    System.out.println("ACCESS GRANTED");
+		} 
+		else if (email.equals(serverEmail)) {
+		    out.println("ACCESS DENIED\nWRONG PASSWORD");
+		    System.out.println("ACCESS DENIED\nWRONG PASSWORD");
+		}
+		else {
+		    out.println("ACCESS DENIED\nWRONG EMAIL");
+		    System.out.println("ACCESS DENIED\nWRONG EMAIL");
+		}
 	}
 }
