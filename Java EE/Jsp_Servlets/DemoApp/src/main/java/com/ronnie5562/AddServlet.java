@@ -8,6 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 //	private static final long serialVersionUID = 1L;
@@ -35,8 +36,13 @@ public class AddServlet extends HttpServlet {
 		
 		// Let's work with sendRedirect Now !!
 		
-		res.sendRedirect("square?k=" + result);
+		// res.sendRedirect("square?k=" + result);
 		
+		// Let's work with session Now !!
+		
+		HttpSession session = req.getSession();
+		session.setAttribute("result", result);
+		res.sendRedirect("square");
 	}
 }
  
