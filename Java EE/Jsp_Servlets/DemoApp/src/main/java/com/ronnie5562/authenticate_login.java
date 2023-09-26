@@ -3,6 +3,7 @@ package com.ronnie5562;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,8 +25,10 @@ public class authenticate_login extends HttpServlet{
 				pass = (String)cookie.getValue();
 		}
 		
-		String serverEmail = "r.abimbola@alustudent.com";
-		String serverPassword = "admin";
+		ServletContext ctx = getServletContext();
+		
+		String serverEmail = ctx.getInitParameter("serverEmail");
+		String serverPassword = ctx.getInitParameter("serverPassword");
 		
 		PrintWriter out = res.getWriter();		
 		
