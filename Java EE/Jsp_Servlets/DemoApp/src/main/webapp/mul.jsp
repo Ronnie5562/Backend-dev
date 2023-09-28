@@ -4,12 +4,21 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Result</title>
 </head>
 <body bgcolor="cyan">
-	
+
+	<%@ page import="java.util.*" %>
+
+	<%!
+		// This section is known as declaration
+		int value = 10;
+	%>
+
 	<%
-		// We get the request object automatically in jsp
+		// This section is known as scriptlet
+		
+		// We get the request and response objects automatically in jsp
 		int firstNum = Integer.parseInt(request.getParameter("jspnum1"));
 		int secondNum = Integer.parseInt(request.getParameter("jspnum2"));
 		
