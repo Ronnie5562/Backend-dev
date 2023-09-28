@@ -28,5 +28,8 @@
 		
 		out.println("Result: " + result);
 	%>
+	
+	<%= value %>
+	
 </body>
 </html>
