@@ -1,10 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="java.sql.*" %>
+    <%@ include file="header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Result</title>
+<style>
+	body {
+		padding: 30px;
+	}
+</style>
 </head>
 <body bgcolor="cyan">
 
@@ -29,7 +35,9 @@
 		out.println("Result: " + result);
 	%>
 	
+	<br>
+
 	<%= value %>
-	
+
 </body>
 </html>
