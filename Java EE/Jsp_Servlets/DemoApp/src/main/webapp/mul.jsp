@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.sql.*" %>
+    pageEncoding="ISO-8859-1" import="java.sql.*" errorPage="error.jsp" %>
     <%@ include file="header.jsp" %>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
 
 	<%!
 		// This section is known as declaration
-		int value = 10;
+		int value = 10 / 0;
 	%>
 
 	<%
