@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.sql.*" errorPage="error.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" errorPage="error.jsp" %>
     <%@ include file="header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Result</title>
 <style>
 	body {
@@ -17,11 +17,11 @@
 	<%@ page import="java.util.*" %>
 
 	<%!
-		// This section is known as declaration
-		int value = 10 / 0;
+		// This section is known as declaration section
 	%>
 
 	<%
+		int value = 10 / 0;
 		// This section is known as scriptlet
 		
 		// We get the request and response objects automatically in jsp
