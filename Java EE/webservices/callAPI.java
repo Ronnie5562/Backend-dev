@@ -25,7 +25,7 @@ public class callAPI {
                 throw new RuntimeErrorException(null, "Failed" + conn.getResponseCode());
             }
 
-            InputStream in;
+            // InputStream in;
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
             String output;
