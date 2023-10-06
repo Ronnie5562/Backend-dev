@@ -27,7 +27,6 @@ public class AddServlet extends HttpServlet {
 //		PrintWriter out = res.getWriter();
 //		out.println("The result is: " + result);
 //
-//		
 //		System.out.println("The result is: " + result);
 		
 		// req.setAttribute("result", result);
@@ -41,10 +40,8 @@ public class AddServlet extends HttpServlet {
 		// res.sendRedirect("square?k=" + result);
 		
 		// Let's work with session Now !!
-		
 		HttpSession session = req.getSession();
 		session.setAttribute("result", result);
 		res.sendRedirect("square");
 	}
 }
- 
