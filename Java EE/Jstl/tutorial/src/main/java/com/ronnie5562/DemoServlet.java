@@ -1,6 +1,7 @@
 package com.ronnie5562;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -9,13 +10,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/DemoServlet")
+@WebServlet("/addAlien")
 public class DemoServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name = "Ronald";
+		PrintWriter out = response.getWriter();
 		
-		request.setAttribute("name", name);
-		RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
-		rd.forward(request, response);
+		int aid = Integer.parseInt(request.getParameter("aid"));
+		String aname = request.getParameter("aname");
+		
+		out.println("Welcome Alien, " + aname);
 	}
 }

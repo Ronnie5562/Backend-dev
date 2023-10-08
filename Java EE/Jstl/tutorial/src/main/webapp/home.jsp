@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-Hello
+	<form action="addAlien">
+		<input type="text" name="aid" ><br>
+		<input type="text" name="aname" ><br>
+		<input type="submit" name="aid" ><br>
+	</form>
 </body>
 </html>
