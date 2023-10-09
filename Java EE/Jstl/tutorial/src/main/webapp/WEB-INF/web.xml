@@ -18,4 +18,13 @@
     <filter-name>idFilter</filter-name>
     <url-pattern>/addAlien</url-pattern>
   </filter-mapping>
+  <filter>
+    <display-name>nameFilter</display-name>
+    <filter-name>nameFilter</filter-name>
+    <filter-class>com.ronnie5562.nameFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>nameFilter</filter-name>
+    <url-pattern>/addAlien</url-pattern>
+  </filter-mapping>
 </web-app>

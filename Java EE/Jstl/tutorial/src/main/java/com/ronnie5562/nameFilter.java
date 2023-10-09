@@ -14,7 +14,13 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 
-public class idFilter extends HttpFilter implements Filter {
+public class nameFilter extends HttpFilter implements Filter {
+
+    public nameFilter() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
 	public void destroy() {
 		// TODO Auto-generated method stub
 	}
@@ -22,20 +28,17 @@ public class idFilter extends HttpFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
-		
 		PrintWriter out = res.getWriter();
 		
-		int aid = Integer.parseInt(req.getParameter("aid"));
+		String aname = req.getParameter("aname");
 		
-		if (aid > 1)
+		if (aname.length() > 2)
 			chain.doFilter(req, res);
 		else
-			out.println("Alien ID must be a positive number");
-			
+			out.println("Alien Name must have more than two characters");
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
 	}
-
 }
