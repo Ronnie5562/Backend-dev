@@ -2,35 +2,39 @@ package com.ronnie5562;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.http.HttpFilter;
-import java.io.IOException;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-/**
- * Servlet Filter implementation class idFilter
- */
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebFilter;
+
 public class idFilter extends HttpFilter implements Filter {
-	/**
-	 * @see Filter#destroy()
-	 */
 	public void destroy() {
 		// TODO Auto-generated method stub
 	}
 
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletResponse res = (HttpServletResponse) response;
 		
-		chain.doFilter(request, response);
+		PrintWriter out = res.getWriter();
+		
+		int aid = Integer.parseInt(req.getParameter("aid"));
+		
+		if (aid > 1)
+			chain.doFilter(req, res);
+		else
+			out.println("Alien ID must be a positive number");
+			
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
 	}
