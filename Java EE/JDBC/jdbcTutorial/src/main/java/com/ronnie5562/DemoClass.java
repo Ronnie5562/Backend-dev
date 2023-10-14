@@ -15,11 +15,17 @@ public class DemoClass {
 	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException
 	{
-		String url = "";
+		String url = "jdbc:mysql://localhost:3306/sakila";
 		String uname = "root";
-		String pass = ""; // REmember to add your database password
+		String pass = ""; // REmember to add your database password before you run !!!
+		String query = "SELECT first_name, last_name FROM actor WHERE actor_id < 20;";
 		
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url, uname, pass);
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		
+		String Fname = rs.getString("first_name");
+		String Lname = rs.getString("last_name");
 	}
 }
