@@ -2,13 +2,12 @@ package com.ronnie5562;
 
 import java.sql.*;
 
-public class InsertOperation {
-	
+public class UsingPreparedStatement {
 	public static void main(String[] args) throws SQLException, ClassNotFoundException
 	{
 		String url = "jdbc:mysql://localhost:3306/sakila";
 		String uname = "root";
-		String pass = "Abimbola123"; // Remember to add your database password before you run !!!
+		String pass = ""; // Remember to add your database password before you run !!!
 		String query = "INSERT INTO actor VALUES (202, 'Ronald', 'Abimbola', '2023-10-14 05:02:19');";
 		
 		Class.forName("com.mysql.jdbc.Driver");
@@ -18,9 +17,9 @@ public class InsertOperation {
 		
 		if (count == 1)
 		{
-			System.out.println(count + "Row Affected");
+			System.out.println(count + " Row Affected");
 		} else {
-			System.out.println(count + "Rows Affected");
+			System.out.println(count + " Rows Affected");
 		}
 		
 		st.close();
