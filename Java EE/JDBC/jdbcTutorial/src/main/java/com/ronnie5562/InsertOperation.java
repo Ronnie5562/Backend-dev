@@ -8,7 +8,7 @@ public class InsertOperation {
 	{
 		String url = "jdbc:mysql://localhost:3306/sakila";
 		String uname = "root";
-		String pass = ""; // REmember to add your database password before you run !!!
+		String pass = ""; // Remember to add your database password before you run !!!
 		String query = "INSERT INTO actor VALUES ('Ronald', 'Abimbola);";
 		
 		Class.forName("com.mysql.jdbc.Driver");
