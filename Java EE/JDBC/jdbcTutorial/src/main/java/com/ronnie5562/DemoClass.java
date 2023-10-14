@@ -17,7 +17,7 @@ public class DemoClass {
 	{
 		String url = "jdbc:mysql://localhost:3306/sakila";
 		String uname = "root";
-		String pass = ""; // REmember to add your database password before you run !!!
+		String pass = ""; // Remember to add your database password before you run !!!
 		String query = "SELECT first_name, last_name FROM actor WHERE actor_id < 20;";
 		
 		Class.forName("com.mysql.jdbc.Driver");
