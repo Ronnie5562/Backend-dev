@@ -24,8 +24,17 @@ public class DemoClass {
 		Connection con = DriverManager.getConnection(url, uname, pass);
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery(query);
+		rs.next();
 		
+		System.out.println(rs);
+
 		String Fname = rs.getString("first_name");
 		String Lname = rs.getString("last_name");
+		
+		System.out.println(Fname + " " + Lname);
+		
+		st.close();
+		con.close();
+		
 	}
 }
