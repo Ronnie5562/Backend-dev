@@ -25,12 +25,7 @@ public class UsingPreparedStatement {
 		
 		int count = st.executeUpdate();
 		
-		if (count == 1)
-		{
-			System.out.println(count + " Row Affected");
-		} else {
-			System.out.println(count + " Rows Affected");
-		}
+		System.out.println(count + " Row(s) Affected");
 		
 		st.close();
 		con.close();

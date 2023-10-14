@@ -16,12 +16,7 @@ public class InsertOperation {
 		Statement st = con.createStatement();
 		int count = st.executeUpdate(query);
 		
-		if (count == 1)
-		{
-			System.out.println(count + " Row Affected");
-		} else {
-			System.out.println(count + " Rows Affected");
-		}
+		System.out.println(count + " Row(s) Affected");
 		
 		st.close();
 		con.close();
