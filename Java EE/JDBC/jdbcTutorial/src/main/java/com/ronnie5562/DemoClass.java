@@ -1,4 +1,5 @@
 package com.ronnie5562;
+import java.sql.*;
 
 /* ==> To successfully work with JDBC, you have to follow the seven steps below
  * 1. import the needed packages
@@ -12,8 +13,9 @@ package com.ronnie5562;
 
 public class DemoClass {
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws ClassNotFoundException
 	{
-		
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con = DriverManager.getConnection();
 	}
 }
