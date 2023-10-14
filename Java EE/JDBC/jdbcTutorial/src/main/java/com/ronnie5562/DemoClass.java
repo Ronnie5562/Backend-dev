@@ -13,9 +13,13 @@ import java.sql.*;
 
 public class DemoClass {
 	
-	public static void main(String[] args) throws ClassNotFoundException
+	public static void main(String[] args) throws ClassNotFoundException, SQLException
 	{
+		String url = "";
+		String uname = "root";
+		String pass = ""; // REmember to add your database password
+		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con = DriverManager.getConnection();
+		Connection con = DriverManager.getConnection(url, uname, pass);
 	}
 }
