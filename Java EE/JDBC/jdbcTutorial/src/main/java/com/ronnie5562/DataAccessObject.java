@@ -18,7 +18,7 @@ class ActorDAO
 	{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila", "root", "Abimbola123");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila", "root", "password"); // Remember put your db actual password
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -90,7 +90,7 @@ public class DataAccessObject {
 		A2.last_name = "Abimbola";
 		A2.last_updated = " 2023-10-15 07:25:50";
 		int numAdded = dao.createActor(A2);
-		System.out.println(numAdded + "Actor(s) Added");
+		System.out.println(numAdded + " Actor(s) Added");
 	}
 
 }
