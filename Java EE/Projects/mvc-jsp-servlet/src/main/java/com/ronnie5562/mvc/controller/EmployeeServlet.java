@@ -11,7 +11,7 @@ import java.io.IOException;
 import com.ronnie5562.mvc.model.EmployeeService;
 
 
-@WebServlet("/EmployeeServlet")
+@WebServlet("/employees")
 public class EmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
