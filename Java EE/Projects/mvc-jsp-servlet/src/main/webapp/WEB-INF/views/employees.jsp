@@ -8,16 +8,34 @@
 <meta charset="ISO-8859-1">
 <title>Employees Data</title>
 <style>
-    /* Optional: Add some basic styling */
+
     table {
-      width: 100%;
+      width: 85%;
+      max-width: 900px;
       border-collapse: collapse;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     th, td {
-      border: 1px solid black;
-      padding: 8px;
+      border: 1px solid #ddd;
+      padding: 12px;
       text-align: left;
     }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+    
   </style>
 </head>
 <body>
@@ -25,7 +43,7 @@
 		List<Employee> employees = (List<Employee>) request.getAttribute("employess");
 	%>
 	
-	<h1>Employes Data</h1>
+	<h1>Employees Data</h1>
 	<table>
 		<thead>
 			<tr>

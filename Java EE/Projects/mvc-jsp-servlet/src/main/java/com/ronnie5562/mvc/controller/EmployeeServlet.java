@@ -28,7 +28,6 @@ public class EmployeeServlet extends HttpServlet {
 		processResquest(request, response);
 	}
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		processResquest(request, response);
 	}
@@ -38,7 +37,6 @@ public class EmployeeServlet extends HttpServlet {
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employees.jsp");
 		dispatcher.forward(request, response);
-		
-		
+
 	}
 }
