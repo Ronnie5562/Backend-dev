@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import com.ronnie5562.mvc.dao.EmployeeDao;
+import com.ronnie5562.mvc.model.Employee;
 import com.ronnie5562.mvc.model.EmployeeService;
 
 
@@ -31,7 +32,7 @@ public class EmployeeServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		processResquest(request, response);
+		saveFormData(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,14 +47,32 @@ public class EmployeeServlet extends HttpServlet {
 
 	}
 	
-	private void processResquest2(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void saveFormData(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String id = request.getParameter("id");
+		int id = Integer.parseInt(request.getParameter("id"));
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String address = request.getParameter("address");
 		String contact = request.getParameter("contact");
+		
+		Employee employee = new Employee();
+		
+		employee.setId(id);
+		employee.setFirstName(firstName);
+		employee.setLastName(lastName);
+		employee.setUsername(username);
+		employee.setPassword(password);
+		employee.setAddress(address);
+		employee.setContact(contact);
+		
+		try {
+			employeeDao.registerEmployee(employee);
+		} catch (ClassNotFoundException error) {
+			error.printStackTrace();
+		}
+		
+		response.sendRedirect("");
 	}
 }
