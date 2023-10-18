@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import com.ronnie5562.mvc.dao.EmployeeDao;
 import com.ronnie5562.mvc.model.EmployeeService;
 
 
@@ -16,12 +17,17 @@ public class EmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private EmployeeService employeeService;
+	
+	private EmployeeDao employeeDao;
 
     public EmployeeServlet() {
         super();
         
         this.employeeService = new EmployeeService();
+        this.employeeDao = new EmployeeDao();
     }
+    
+    
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -38,5 +44,16 @@ public class EmployeeServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employees.jsp");
 		dispatcher.forward(request, response);
 
+	}
+	
+	private void processResquest2(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String id = request.getParameter("id");
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String address = request.getParameter("address");
+		String contact = request.getParameter("contact");
 	}
 }

@@ -13,7 +13,8 @@ public class EmployeeDao {
 		try {
 			Connection connection = DriverManager.getConnection("jdbc://localhost:3306/java_db", "root", "Abimbola123");
 			PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
-			preparedStatement.setInt(1, 1);
+			
+			preparedStatement.setInt(1, employee.getId());
 			preparedStatement.setString(2, employee.getFirstName());
 			preparedStatement.setString(3, employee.getLastName());
 			preparedStatement.setString(4, employee.getUsername());
