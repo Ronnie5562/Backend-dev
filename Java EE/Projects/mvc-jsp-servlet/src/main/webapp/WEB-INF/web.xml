@@ -11,12 +11,12 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>EmployeeServlet2</display-name>
-    <servlet-name>EmployeeServlet2</servlet-name>
-    <servlet-class>com.ronnie5562.mvc.controller.EmployeeServlet2</servlet-class>
+    <display-name>EmployeeServlet</display-name>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <servlet-class>com.ronnie5562.mvc.controller.EmployeeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>EmployeeServlet2</servlet-name>
-    <url-pattern>/EmployeeServlet2</url-pattern>
+    <servlet-name>EmployeeServlet</servlet-name>
+    <url-pattern>/EmployeeServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -13,7 +13,7 @@ import com.ronnie5562.mvc.model.Employee;
 import com.ronnie5562.mvc.model.EmployeeService;
 
 
-@WebServlet("/employees")
+@WebServlet("/register")
 public class EmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -32,17 +32,18 @@ public class EmployeeServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		saveFormData(request, response);
+		
+		processResquest(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		processResquest(request, response);
+		saveFormData(request, response);
 	}
 	
 	private void processResquest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("employess", this.employeeService.getEmployees());
+		//request.setAttribute("employess", this.employeeService.getEmployees());
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employees.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeeregister.jsp");
 		dispatcher.forward(request, response);
 
 	}
@@ -73,6 +74,7 @@ public class EmployeeServlet extends HttpServlet {
 			error.printStackTrace();
 		}
 		
-		response.sendRedirect("");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeedetails.jsp");
+		dispatcher.forward(request, response);
 	}
 }
