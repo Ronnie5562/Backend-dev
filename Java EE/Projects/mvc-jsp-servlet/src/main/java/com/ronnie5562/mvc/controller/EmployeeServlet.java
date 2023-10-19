@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 import com.ronnie5562.mvc.dao.EmployeeDao;
 import com.ronnie5562.mvc.model.Employee;
@@ -41,7 +42,7 @@ public class EmployeeServlet extends HttpServlet {
 	}
 	
 	private void processResquest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//request.setAttribute("employess", this.employeeService.getEmployees());
+		request.setAttribute("employess", this.employeeService.getEmployees());
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeeregister.jsp");
 		dispatcher.forward(request, response);
@@ -69,9 +70,12 @@ public class EmployeeServlet extends HttpServlet {
 		employee.setContact(contact);
 		
 		try {
+			employeeDao.connect();
 			employeeDao.registerEmployee(employee);
 		} catch (ClassNotFoundException error) {
 			error.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeedetails.jsp");
