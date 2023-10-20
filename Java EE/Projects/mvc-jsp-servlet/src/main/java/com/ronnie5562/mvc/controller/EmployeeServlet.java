@@ -34,14 +34,17 @@ public class EmployeeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		processResquest(request, response);
+		processRequest(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		saveFormData(request, response);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employees.jsp");
+		dispatcher.forward(request, response);
 	}
 	
-	private void processResquest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("employess", this.employeeService.getEmployees());
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeeregister.jsp");
@@ -72,13 +75,14 @@ public class EmployeeServlet extends HttpServlet {
 		try {
 			employeeDao.connect();
 			employeeDao.registerEmployee(employee);
-		} catch (ClassNotFoundException error) {
-			error.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
+			
+		} catch (ClassNotFoundException err) {
+			err.printStackTrace();
+			
+		} catch (SQLException err) {
+			err.printStackTrace();
+			
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/employeedetails.jsp");
-		dispatcher.forward(request, response);
 	}
 }

@@ -40,7 +40,7 @@
 </head>
 <body>
 	<%
-		List<Employee> employees = (List<Employee>) request.getAttribute("employess");
+		List<Employee> employees = (List<Employee>) request.getAttribute("employees");
 	%>
 	
 	<h1>Employees Data</h1>
