@@ -49,11 +49,11 @@ public class UserServlet extends HttpServlet {
 			
 			case "/insert" -> insertUser(request, response);
 			
-			case "/delete" -> System.out.println("heelo");
+			case "/delete" -> deleteUser(request, response);
 			
-			case "/edit" -> System.out.println("heelo");
+			case "/edit" -> insertUser(request, response);
 			
-			case "/update" -> System.out.println("heelo");
+			case "/update" -> insertUser(request, response);
 			
 			default -> throw new IllegalArgumentException("Unexpected value: " + action);
 			
@@ -65,7 +65,7 @@ public class UserServlet extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 	
-	private void insertUser (HttpServletRequest request, HttpServletResponse response) {
+	private void insertUser (HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String country = request.getParameter("country");
@@ -74,18 +74,22 @@ public class UserServlet extends HttpServlet {
 		
 		try {
 			userDAO.insertUser(newUser);
-			response.sendRedirect("list");
-		} catch (IOException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
+		response.sendRedirect("list");
 	}
 	
-	private void deleteUser(HttpServletRequest request, HttpServletResponse response) {
+	private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		
-		userDAO.deleteUser(id);
+		try {
+			userDAO.deleteUser(id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 		response.sendRedirect("list");
 	}
 
