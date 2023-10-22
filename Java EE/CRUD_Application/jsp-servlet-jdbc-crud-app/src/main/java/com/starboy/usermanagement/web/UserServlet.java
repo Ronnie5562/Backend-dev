@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.startup.Tomcat.ExistingStandardWrapper;
+
 import com.starboy.usermananagement.dao.UserDAO;
 import com.starboy.usermananagement.model.User;
 
@@ -51,7 +53,7 @@ public class UserServlet extends HttpServlet {
 			
 			case "/delete" -> deleteUser(request, response);
 			
-			case "/edit" -> insertUser(request, response);
+			case "/edit" -> showEditForm(request, response);
 			
 			case "/update" -> insertUser(request, response);
 			
@@ -91,6 +93,21 @@ public class UserServlet extends HttpServlet {
 		}
 		
 		response.sendRedirect("list");
+	}
+	
+	private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+		User existingUser = null;
+		
+		try {
+			existingUser = userDAO.selectUser(id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
+		request.setAttribute("user", existingUser);
+		dispatcher.forward(request, response);
 	}
 
 }
