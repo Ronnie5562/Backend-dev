@@ -2,6 +2,7 @@ package com.starboy.usermanagement.web;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -45,6 +46,7 @@ public class UserServlet extends HttpServlet {
 		String action = request.getServletPath();
 		
 		switch (action) {
+		
 			case "/new" -> showNewForm(request, response);
 			
 			case "/insert" -> insertUser(request, response);
@@ -55,7 +57,7 @@ public class UserServlet extends HttpServlet {
 			
 			case "/update" -> updateUser(request, response);
 			
-			default -> throw new IllegalArgumentException("Unexpected value: " + action);
+			default -> listUser(request, response);
 			
 		}
 	}
@@ -121,6 +123,20 @@ public class UserServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		response.sendRedirect("list");
+	}
+	
+	private void listUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<User> listUser = null;
+		
+		try {
+			listUser = userDAO.selectAllUsers();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		request.setAttribute("listUser", listUser);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
