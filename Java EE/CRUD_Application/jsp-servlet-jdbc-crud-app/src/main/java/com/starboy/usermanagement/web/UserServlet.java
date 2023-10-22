@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.catalina.startup.Tomcat.ExistingStandardWrapper;
-
 import com.starboy.usermananagement.dao.UserDAO;
 import com.starboy.usermananagement.model.User;
 
@@ -55,7 +53,7 @@ public class UserServlet extends HttpServlet {
 			
 			case "/edit" -> showEditForm(request, response);
 			
-			case "/update" -> insertUser(request, response);
+			case "/update" -> updateUser(request, response);
 			
 			default -> throw new IllegalArgumentException("Unexpected value: " + action);
 			
@@ -108,6 +106,21 @@ public class UserServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
 		request.setAttribute("user", existingUser);
 		dispatcher.forward(request, response);
+	}
+	
+	private void updateUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String country = request.getParameter("country");
+		
+		User existingUser = new User(id, name, email, country);
+		try {
+			userDAO.updatetUser(existingUser);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		response.sendRedirect("list");
 	}
 
 }
