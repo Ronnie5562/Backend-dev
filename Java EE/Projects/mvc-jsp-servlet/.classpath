@@ -18,5 +18,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/web.xml"/>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/jakarta.servlet-api-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HP/Downloads/javax.servlet-api-4.0.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

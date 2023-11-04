@@ -40,7 +40,8 @@
 </head>
 <body>
 	<%
-		List<Employee> employees = (List<Employee>) request.getAttribute("employees");
+	List<Employee> employees = (List<Employee>) request.getAttribute("employees");
+	System.out.println("Data from table page: " + employees);
 	%>
 	
 	<h1>Employees Data</h1>

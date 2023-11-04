@@ -5,13 +5,12 @@ import java.util.*;
 import com.ronnie5562.mvc.dao.EmployeeDao;
 
 public class EmployeeService {
-	public List<Employee> getEmployees() {
+	public ArrayList<Employee> getEmployees() {
 		EmployeeDao employeedao = new EmployeeDao();
 		ResultSet data = null;
-		List<Employee> list = new ArrayList<Employee>();	
+		ArrayList<Employee> list = new ArrayList<Employee>();	
 		
 		try {
-			employeedao.connect();
 			data = employeedao.fetchEmployees();
 			
 			while(data.next())
@@ -25,13 +24,13 @@ public class EmployeeService {
 			
 			return list;
 			
-		} catch (ClassNotFoundException | SQLException err) {
+		} catch (SQLException err) {
 			err.printStackTrace();
 			
 		} catch (Exception err) {
 			err.printStackTrace();
 		}
 		
-		return null;
+		return list;
 	}
 }

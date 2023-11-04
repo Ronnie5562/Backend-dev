@@ -72,7 +72,7 @@
 <body>
  <div class="employee-form">
         <h1>Employee Register Form</h1>
-        <form action="<%= request.getContextPath() %>/register" method="post">
+        <form action="<%=request.getContextPath() %>/register" method="post">
             <table>
                 <tr>
                     <td>Employee id</td>

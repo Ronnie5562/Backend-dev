@@ -44,6 +44,7 @@ public class UserServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String action = request.getServletPath();
+		System.out.println("Here we go: " + action);
 		
 		switch (action) {
 		
@@ -56,6 +57,8 @@ public class UserServlet extends HttpServlet {
 			case "/edit" -> showEditForm(request, response);
 			
 			case "/update" -> updateUser(request, response);
+			
+			case "/" -> listUser(request, response);
 			
 			default -> listUser(request, response);
 			
